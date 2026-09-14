@@ -1,5 +1,5 @@
 
-![ChatGPT to LaTeX](https://github.com/quantasci/chat2pdf/blob/main/chat2pdf.png)
+![ChatGPT to LaTeX|500](https://github.com/quantasci/chat2pdf/blob/main/chat2pdf.png)
 
 # chat2pdf
 2026 (c) Quanta Sciences | Rama Hoetzlein
