@@ -5,7 +5,7 @@
 2026 (c) Quanta Sciences | Rama Hoetzlein
 MIT License
 
-This tool converts ChatGPT Exported Backups to LaTeX / PDF.
+This tool converts ChatGPT Exported Backups for json format to LaTeX / PDF.
 
 ## Requirements & Install
 1. Install Python
@@ -33,11 +33,35 @@ Chat2pdf was tested on 731 chats, including many with math equations.
 It was able to successfully convert 63% (463 files) chats on the first try.
 For the remaining it provides a converted .tex file for further editing.
 
-## Issues
+## Issues & Limitations
 This is a work-in-progress. Chat2pdf can fail to convert .tex to .pdf. 
 In that case, it will print "Failed", and at least try to provide you with the .tex file.
 You can then use your favorite editor (eg. Texmaker), run the .tex, and view the LaTeX errors yourself.
 Often the errors are easily repaired to get a final pdf.
+Chat2pdf does not handle images currently.
+
+## Algorithm Details
+Conversion from ChatGPT Backup to downloadable LaTeX/PDF would hopefully be a part of ChatGPT in the future.
+Chat2pdf currently fills this role from the exported json archives provided by OpenAI/ChatGPT.
+The following general strategy converts the json to LaTeX:
+1. Chats are stored in a json node tree, with ChatGTP responses as children of User queries
+2. Sibling chats are organized by chronology via the create_time.
+3. For each conversation, chats are extracted by sorting chronologically and evaluating depth-first, to give the correct output ordering of messages.
+4. Messages are cleaned of ChatGTP content markers, and Genui (generative UI outputs), which don't translate easily to LaTeX.
+5. Unicode characters are converted to symbols, ascii, or whenever possible to math symbols. For example, math operations such as less-than-equal ≤, are converted to LaTeX $leq$. 
+6. Markdown is converted to LaTeX. Common symbols (% & #) are converted to LaTeX escapes (\% \& \#). ChatGPT citation artifacts are removed. Existing math/LaTeX blocks in the chat are preserved whenever possible. Markdown headings (# ## ###) are converted to LaTeX \sections and \subsections. Bold and italic are converted to \textit{}, \textbf{}. 
+7. User input sections are marked with a yellow box (\begin{userbox} via tcolorbox package), to more easily distinguish from ChatGPT responses. 
+8. The header.tex is prepended to the .tex file to provide all the necessary packages.
+9. The final .tex file is run through pdf2latex to generate .pdf
+10. Output .tex and .pdf are given dated names, for easier sorting by original chat date. If the generation fails, it prints a message, but still keeps the .tex for further inspection.
+
+## Citation of this Work
+2026. Hoetzlein, Rama. "chat2pdf: Conversion of ChatGPT chat history to LaTeX". Retrieved from: github.com/quantasci/chat2pdf
+
+
+
+
+
 
 
 
