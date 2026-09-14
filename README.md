@@ -5,12 +5,12 @@
 2026 (c) Quanta Sciences | Rama Hoetzlein<br>
 MIT License
 
-This tool converts ChatGPT Exported Backups for json format to LaTeX / PDF.
+This tool converts ChatGPT Exported Backups from json format to LaTeX / PDF.
 
 ## Requirements & Install
 1. Install Python
-2. Install a LaTeX distribution which has pdflatex.
-3. Modify your environment path to include the latex binaries. e.g. On Windows you need to confirm that 'pdflatex' runs from the command prompt.
+2. Install a TeX distribution which has pdflatex, such as MiKTeX (Windows) or TeX Live (Linux)
+3. Modify your environment path to include the latex binaries. On Windows you need to confirm that 'pdflatex' runs from the command prompt.
 4. Clone this repository locally
 
 ## Usage
