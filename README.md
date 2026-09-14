@@ -24,7 +24,7 @@ You may needs to wait several days to receive the Export by e-mail.
 The first argument is the path to the input archive folder containing .json files.
 The second argument is the output folder for tex/pdf files.
 ```
-python chat2pdf JsonFolder Chats
+python chat2pdf input_json_folder output_folder
 ```
 5. Output will include both .tex and .pdf files
 
