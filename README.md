@@ -1,2 +1,11 @@
+
+![ChatGPT to LaTeX|300](https://github.com/quantasci/chat2pdf/blob/main/chat2pdf.png)
+
 # chat2pdf
-Convert ChatGTP Backups to LaTeX / PDF
+2026 (c) Quanta Sciences | Rama Hoetzlein
+MIT License
+
+This tool converts ChatGPT Exported Backups to LaTeX / PDF.
+
+
+
