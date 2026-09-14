@@ -1,0 +1,90 @@
+ \documentclass[11pt]{article}
+
+% --------------------------------------------------
+% Encoding and fonts
+% --------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% --------------------------------------------------
+% Mathematics
+% --------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --------------------------------------------------
+% Text / formatting
+% --------------------------------------------------
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{parskip}
+\usepackage{enumitem}
+
+% --------------------------------------------------
+% Graphics and figures
+% --------------------------------------------------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+
+% --------------------------------------------------
+% Tables
+% --------------------------------------------------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+
+% --------------------------------------------------
+% Code
+% --------------------------------------------------
+\usepackage{listings}
+
+% --------------------------------------------------
+% Hyperlinks
+% --------------------------------------------------
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+]{hyperref}
+
+% --------------------------------------------------
+% Yellow boxes
+% --------------------------------------------------
+\usepackage[most]{tcolorbox}
+\definecolor{useryellow}{RGB}{255, 255, 120}
+
+\newtcolorbox{userbox}{
+    colback=useryellow,
+    colframe=useryellow,
+    boxrule=0pt,
+    arc=2pt,
+    left=6pt,
+    right=6pt,
+    top=6pt,
+    bottom=6pt,
+    breakable
+}
+
+% --------------------------------------------------
+% Common mathematical shortcuts
+% --------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+% --------------------------------------------------
+% Document
+% --------------------------------------------------
+\begin{document}
